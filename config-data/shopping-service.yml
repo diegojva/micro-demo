@@ -1,0 +1,29 @@
+
+
+spring:
+  sql:
+    init:
+      platform: postgres
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: sistemas
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments:
+        format_sql: false
+
+    defer-datasource-initialization: true
+
+
+server:
+  port: 8092
