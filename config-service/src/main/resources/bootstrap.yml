@@ -7,4 +7,12 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/diegojva/micro-demo.git
+          searchPaths: config-data
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PASSWORD}
+
+  security:
+    user:
+      name: root
+      password: s3cr3t
